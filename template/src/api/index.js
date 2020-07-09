@@ -8,7 +8,6 @@ export const incrementGameUserScore = (gameId, userId, value) => {
   return dataLayer.updateGameUser(gameId, userId, { score: increment(value) });
 };
 
-
 export default {
   ...dataLayer,
 
