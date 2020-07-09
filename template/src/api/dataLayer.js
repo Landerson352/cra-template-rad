@@ -1,3 +1,13 @@
+/*
+  Data layer
+
+  This module does most of the interfacing with Firebase.
+  It build shorthand references for each collection and document.
+  It exposes reactive hooks for the collections and documents.
+  It exposes CRUD (AGUD?) methods for the collections.
+  It handles a small amount of normalization.
+ */
+
 import firebase from 'firebase';
 
 import { updateUser } from '../lib/useAuth';

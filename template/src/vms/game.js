@@ -1,3 +1,11 @@
+/*
+  Game viewmodel
+
+  This is a context provider/consumer pattern.
+  The provider takes a gameId, and provides a viewmodel the game's properties and methods.
+  The viewmodel context can be consumed with a single hook.
+ */
+
 import React from 'react';
 import { find, isEmpty, map, sample } from 'lodash';
 import { usePrevious } from 'react-use';
