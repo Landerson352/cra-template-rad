@@ -11,6 +11,7 @@
     "firebase"
   ],
   "description": "A create-react-app template for rapid-application-development.",
+  "main": "template.json",
   "repository": {
     "type": "git",
     "url": "https://github.com/Landerson352/cra-template-rad.git"
