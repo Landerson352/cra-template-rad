@@ -10,14 +10,11 @@ const { arrayRemove, arrayUnion } = firebase.firestore.FieldValue;
 const dbr = {};
 dbr.games = () => firebase.firestore().collection('games');
 dbr.game = (gameId) => dbr.games().doc(gameId);
-dbr.gameTiles = (gameId) => dbr.games().doc(gameId).collection('tiles');
-dbr.gameTile = (gameId, tileId) => dbr.gameTiles(gameId).doc(tileId);
 dbr.gameUsers = (gameId) => dbr.games().doc(gameId).collection('users');
 dbr.gameUser = (gameId, userId) => dbr.gameUsers(gameId).doc(userId);
 
 // Data hooks
 export const useGameData = (gameId) => useDocumentData(dbr.game(gameId));
-export const useGameTilesData = (gameId) => useCollectionData(dbr.gameTiles(gameId));
 export const useGameUserData = (gameId, userId) => useDocumentData(dbr.gameUser(gameId, userId));
 export const useGameUsersData = (gameId) => useCollectionData(dbr.gameUsers(gameId));
 export const useUserGames = (userId) => useCollectionData(
@@ -39,20 +36,6 @@ export const updateGame = (gameId, values) => {
 };
 export const deleteGame = (gameId) => {
   return dbr.game(gameId).delete();
-};
-
-// Game Tiles
-export const addGameTile = (gameId, values) => {
-  return dbr.gameTiles(gameId).add(values);
-};
-export const getGameTile = (gameId, tileId) => {
-  return dbr.gameTile(gameId, tileId).get();
-};
-export const updateGameTile = (gameId, tileId, values) => {
-  return dbr.gameTile(gameId, tileId).set(values, { merge: true });
-};
-export const deleteGameTile = (gameId, tileId) => {
-  return dbr.gameTile(gameId, tileId).delete();
 };
 
 // Game Users
@@ -77,7 +60,6 @@ export const deleteGameUser = async (gameId, userId) => {
 
 export default {
   useGameData,
-  useGameTilesData,
   useGameUserData,
   useGameUsersData,
   useUserGames,
@@ -86,11 +68,6 @@ export default {
   getGame,
   updateGame,
   deleteGame,
-
-  addGameTile,
-  getGameTile,
-  updateGameTile,
-  deleteGameTile,
 
   addGameUser,
   getGameUser,

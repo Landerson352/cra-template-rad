@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { find } from 'lodash';
 
 import {
-  faArrowAltRight,
-  faArrowAltToRight,
+  faArrowRight,
   faCheck,
   faCog,
   faCopy,
@@ -15,11 +14,10 @@ import {
   faSignOutAlt,
   faUndoAlt,
   faUserPlus,
-} from '@fortawesome/free-regular-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 
 const icons = [
-  faArrowAltRight,
-  faArrowAltToRight,
+  faArrowRight,
   faCheck,
   faCog,
   faCopy,

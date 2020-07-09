@@ -64,7 +64,7 @@ const NewGameButton = (props) => {
         isOpen={isOpen}
         onClose={onClose}
         onSubmit={handleSubmit(onSubmit)}
-        footer={<Button type="submit" rightIcon="arrow-alt-right">Start playing</Button>}
+        footer={<Button type="submit" rightIcon="arrow-right">Start playing</Button>}
       >
         <Input
           name="name"
@@ -97,7 +97,7 @@ const JoinGameButton = (props) => {
         isOpen={isOpen}
         onClose={onClose}
         onSubmit={handleSubmit(onSubmit)}
-        footer={<Button type="submit" rightIcon="arrow-alt-right">Join game</Button>}
+        footer={<Button type="submit" rightIcon="arrow-right">Join game</Button>}
       >
         <Input
           name="gameId"
