@@ -24,9 +24,6 @@ Create accounts with these, if you don't already have them.
 
 1. [Create a project repository in Github](https://github.com/new), and check it out locally.
 
-1. [Import your repository in Vercel](https://vercel.com/import/git). 
-   > Your code commits will auto-deploy to `staging`, and you can promote them to `production`.
-
 1. From a terminal in your local project folder:
     
     ```
@@ -41,9 +38,18 @@ Create accounts with these, if you don't already have them.
 
 1. Update `src/firebaseConfig.js` with *Config* object from your Firebase Web App settings.
 
+### Develop
+
 1. In terminal, start the local dev server:
    ```
    $ yarn dev
    ``` 
 
 1. Follow the remainder of the instructions in your project's README.
+
+### Deploy
+
+1. [Import your repository in Vercel](https://vercel.com/import/git). 
+   > Your code commits will auto-deploy to `staging`, and you can promote them to `production`.
+
+1. Add your Vercel hosting domain to the *Authorized domains* under *Authentication*.
